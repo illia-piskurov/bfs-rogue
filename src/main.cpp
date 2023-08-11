@@ -9,7 +9,7 @@
 int main(int argv, char** args)
 {
     try {
-        auto view = std::make_unique<View>();
+        View view;
 
         SDL_Event windowEvent;
         while (true) {
@@ -18,11 +18,11 @@ int main(int argv, char** args)
                     break;
                 }
                 if (SDL_KEYDOWN == windowEvent.type) {
-                    view->regenModel();
+                    view.regenModel();
                 }
             }
 
-            view->DrawFrame();
+            view.DrawFrame();
         }
     } catch (const std::runtime_error& e) {
         std::cout << e.what() << std::endl;

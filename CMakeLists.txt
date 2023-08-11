@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.0...3.26)
 
-project(squaddie-rogue
+project(bfs-rogue
     VERSION 0.1.0
     LANGUAGES CXX
 )
@@ -33,11 +33,11 @@ set(SOURCES
 find_package(SDL2 REQUIRED)
 
 add_executable(
-    squaddie-rogue
+    bfs-rogue
     ${SOURCES}
 )
 
 target_link_libraries(
-    squaddie-rogue
+    bfs-rogue
     PRIVATE SDL2::SDL2
 )
