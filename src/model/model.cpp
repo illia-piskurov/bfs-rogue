@@ -15,6 +15,8 @@ Model::Model()
 Model::~Model()
 {
     delete game_map_;
+    delete portal_;
+    delete hero_;
 }
 
 SDL_Texture* Model::LoadTexture(const char path[], SDL_Renderer* renderer)

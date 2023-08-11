@@ -1,6 +1,7 @@
 /* Author: Illia Piskurov */
 
 #include "view.h"
+#include <SDL_render.h>
 
 View::View()
 {
@@ -20,6 +21,10 @@ View::~View()
 {
     SDL_DestroyWindow(window_);
     SDL_DestroyRenderer(renderer_);
+
+    for (auto texture : tilesTextures_) {
+        SDL_DestroyTexture(texture);
+    }
 }
 
 void View::createWindow()
